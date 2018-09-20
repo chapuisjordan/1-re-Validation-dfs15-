@@ -1,0 +1,111 @@
+/****Couleur****/
+@purple : #240B36;
+@red : #A4031F;
+@yellow : #F2DC5D;
+@beige : #F2A359;
+@marron : #DB9065;
+
+/*****Font*****/
+@raleway : 'Raleway', sans-serif;
+
+/**************/
+
+body{
+  margin: 0;
+  background-color: @red;
+}
+p{
+  font-family: @raleway;
+}
+
+@keyframes transitionColor {
+  0%{border-color: @beige;}
+  30%{border-color: @marron;}
+  60%{border-color: @yellow;}
+  100%{border-color: @purple;}
+}
+/****************************/
+/**********Header************/
+/****************************/
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: @purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    h1{
+      color: white;
+      margin: 0;
+    }
+}
+
+/******************************/
+/**************Main************/
+/******************************/
+.start-game{
+  margin: 30px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button{
+    font-size: 20px;
+    border: 1px solid black;
+    background: transparent;
+  }
+  button:hover{
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+}
+.space-game{
+  margin: 60px auto 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.carre{
+  border-radius: 90px;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  border: 10px solid;
+  animation: transitionColor 2s alternate infinite;
+}
+.validation{
+  button{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #F2A359;
+    background-color: #DB9065;
+    border-radius: 2px;
+  }
+  button:hover{
+    cursor: pointer;
+    font-size: 22px;
+    padding: 12px;
+  }
+}
+.win-window, .loose-window, .validation{
+  display: none;
+}
+.win-window, .loose-window{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-size: 40px;
+  }
+}
+.points{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .points-texte{
+    font-size: 70px;
+  }
+}

@@ -1,0 +1,12 @@
+README
+
+Problèmes rencontrés :
+
+-(randFirst == randSecond) -> Array ?? Comparait toutes les valeurs depuis le départ.
+-points ? Crash
+-less... Google Chrome
+
+Améliorations :
+-points
+-style
+-bouton restart
